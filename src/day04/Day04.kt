@@ -20,13 +20,9 @@ fun main() {
         this.first.contains(this.second.first) || this.first.contains(this.second.last) ||
         this.second.contains(this.first.first) || this.second.contains(this.first.last)
 
-    fun part1(input: List<String>): Int {
-        return input.map { it.parseLine() }.count { it.fullyContains() }
-    }
+    fun part1(input: List<String>): Int = input.map { it.parseLine() }.count { it.fullyContains() }
 
-    fun part2(input: List<String>): Int {
-        return input.map { it.parseLine() }.count { it.partiallyContains() }
-    }
+    fun part2(input: List<String>): Int = input.map { it.parseLine() }.count { it.partiallyContains() }
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("day04/input_test")
