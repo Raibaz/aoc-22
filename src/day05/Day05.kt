@@ -5,7 +5,7 @@ import readInput
 typealias Stacks = List<ArrayDeque<Char>>
 
 fun parseInput(input: List<String>): Pair<Stacks, List<Operation>> {
-    val stacksInput = input.takeWhile { !it.contains("[0-9]".toRegex()) }
+    val stacksInput = input.takeWhile { it.contains("[A-Z]".toRegex()) }
 
     val stackCount = input.first { it.contains("[0-9]".toRegex()) }.split(" ").last().toInt()
 
@@ -18,7 +18,7 @@ fun parseInput(input: List<String>): Pair<Stacks, List<Operation>> {
 
 fun parseStacks(input: List<String>, stackCount: Int) : Stacks {
     val stacks = mutableListOf<ArrayDeque<Char>>()
-    (1..stackCount).forEach {
+    (1..stackCount).forEach { _ ->
         stacks.add(ArrayDeque())
     }
 
