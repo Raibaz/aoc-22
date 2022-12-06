@@ -32,7 +32,7 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("day03/input_test")
+    val testInput = readInput("day03/input_test.txt")
     println(part1(testInput))
 
     val input = readInput("day03/input")

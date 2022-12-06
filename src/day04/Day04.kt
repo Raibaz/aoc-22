@@ -25,7 +25,7 @@ fun main() {
     fun part2(input: List<String>): Int = input.map { it.parseLine() }.count { it.partiallyContains() }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("day04/input_test")
+    val testInput = readInput("day04/input_test.txt")
     println(part1(testInput))
 
     val input = readInput("day04/input")
